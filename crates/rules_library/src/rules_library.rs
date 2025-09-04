@@ -123,7 +123,7 @@ pub fn open_rules_library(
             let window_decorations = match std::env::var("ZED_WINDOW_DECORATIONS") {
                 Ok(val) if val == "server" => gpui::WindowDecorations::Server,
                 Ok(val) if val == "client" => gpui::WindowDecorations::Client,
-                _ => gpui::WindowDecorations::Client,
+                _ => gpui::WindowDecorations::Server,
             };
             cx.open_window(
                 WindowOptions {
