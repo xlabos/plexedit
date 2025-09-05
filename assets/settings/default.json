@@ -383,23 +383,6 @@
   },
   // Whether to allow windows to tab together based on the user’s tabbing preference (macOS only).
   "use_system_window_tabs": false,
-  // Titlebar related settings
-  "title_bar": {
-    // Whether to show the branch icon beside branch switcher in the titlebar.
-    "show_branch_icon": false,
-    // Whether to show the branch name button in the titlebar.
-    "show_branch_name": true,
-    // Whether to show the project host and name in the titlebar.
-    "show_project_items": true,
-    // Whether to show onboarding banners in the titlebar.
-    "show_onboarding_banner": true,
-    // Whether to show user picture in the titlebar.
-    "show_user_picture": true,
-    // Whether to show the sign in button in the titlebar.
-    "show_sign_in": true,
-    // Whether to show the menus in the titlebar.
-    "show_menus": false
-  },
   // Scrollbar related settings
   "scrollbar": {
     // When to show the scrollbar in the editor.

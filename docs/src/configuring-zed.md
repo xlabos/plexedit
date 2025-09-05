@@ -4065,34 +4065,6 @@ Run the `theme selector: toggle` action in the command palette to see a current 
 
 Run the `theme selector: toggle` action in the command palette to see a current list of valid themes names.
 
-## Title Bar
-
-- Description: Whether or not to show various elements in the title bar
-- Setting: `title_bar`
-- Default:
-
-```json
-"title_bar": {
-  "show_branch_icon": false,
-  "show_branch_name": true,
-  "show_project_items": true,
-  "show_onboarding_banner": true,
-  "show_user_picture": true,
-  "show_sign_in": true,
-  "show_menus": false
-}
-```
-
-**Options**
-
-- `show_branch_icon`: Whether to show the branch icon beside branch switcher in the titlebar
-- `show_branch_name`: Whether to show the branch name button in the titlebar
-- `show_project_items`: Whether to show the project host and name in the titlebar
-- `show_onboarding_banner`: Whether to show onboarding banners in the titlebar
-- `show_user_picture`: Whether to show user picture in the titlebar
-- `show_sign_in`: Whether to show the sign in button in the titlebar
-- `show_menus`: Whether to show the menus in the titlebar
-
 ## Vim
 
 - Description: Whether or not to enable vim mode.

@@ -11,7 +11,6 @@ use ui::prelude::*;
 #[derive(Debug, PartialEq, Eq, Clone, Copy, strum::Display, EnumString, EnumIter)]
 #[strum(serialize_all = "snake_case")]
 pub enum ComponentStory {
-    ApplicationMenu,
     AutoHeightEditor,
     CollabNotification,
     ContextMenu,
@@ -37,9 +36,6 @@ pub enum ComponentStory {
 impl ComponentStory {
     pub fn story(&self, window: &mut Window, cx: &mut App) -> AnyView {
         match self {
-            Self::ApplicationMenu => cx
-                .new(|cx| title_bar::ApplicationMenuStory::new(window, cx))
-                .into(),
             Self::AutoHeightEditor => AutoHeightEditorStory::new(window, cx).into(),
             Self::CollabNotification => cx
                 .new(|_| collab_ui::notifications::CollabNotificationStory)

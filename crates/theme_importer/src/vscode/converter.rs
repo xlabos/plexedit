@@ -6,8 +6,8 @@ use theme::{
     ThemeColorsContent, ThemeContent, ThemeStyleContent,
 };
 
-use crate::ThemeMetadata;
 use crate::vscode::{VsCodeTheme, VsCodeTokenScope};
+use crate::ThemeMetadata;
 
 use super::ZedSyntaxToken;
 
@@ -146,7 +146,6 @@ impl VsCodeThemeConverter {
                 .or(vscode_token_colors_foreground.clone()),
             text_muted: vscode_colors.tab.inactive_foreground.clone(),
             status_bar_background: vscode_colors.status_bar.background.clone(),
-            title_bar_background: vscode_colors.title_bar.active_background.clone(),
             toolbar_background: vscode_colors
                 .breadcrumb
                 .background

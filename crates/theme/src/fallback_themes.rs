@@ -1,11 +1,11 @@
 use std::sync::Arc;
 
-use gpui::{FontStyle, FontWeight, HighlightStyle, Hsla, WindowBackgroundAppearance, hsla};
+use gpui::{hsla, FontStyle, FontWeight, HighlightStyle, Hsla, WindowBackgroundAppearance};
 
 use crate::{
-    AccentColors, Appearance, PlayerColors, StatusColors, StatusColorsRefinement, SyntaxTheme,
-    SystemColors, Theme, ThemeColors, ThemeColorsRefinement, ThemeFamily, ThemeStyles,
-    default_color_scales,
+    default_color_scales, AccentColors, Appearance, PlayerColors, StatusColors,
+    StatusColorsRefinement, SyntaxTheme, SystemColors, Theme, ThemeColors, ThemeColorsRefinement,
+    ThemeFamily, ThemeStyles,
 };
 
 /// The default theme family for Zed.
@@ -133,8 +133,6 @@ pub(crate) fn zed_default_dark() -> Theme {
                 icon_accent: blue,
                 debugger_accent: red,
                 status_bar_background: bg,
-                title_bar_background: bg,
-                title_bar_inactive_background: bg,
                 toolbar_background: editor,
                 tab_bar_background: bg,
                 tab_inactive_background: bg,

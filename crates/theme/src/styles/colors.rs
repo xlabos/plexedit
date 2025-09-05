@@ -121,8 +121,6 @@ pub struct ThemeColors {
     // UI Elements
     // ===
     pub status_bar_background: Hsla,
-    pub title_bar_background: Hsla,
-    pub title_bar_inactive_background: Hsla,
     pub toolbar_background: Hsla,
     pub tab_bar_background: Hsla,
     pub tab_inactive_background: Hsla,
@@ -323,8 +321,6 @@ pub enum ThemeColorField {
     IconPlaceholder,
     IconAccent,
     StatusBarBackground,
-    TitleBarBackground,
-    TitleBarInactiveBackground,
     ToolbarBackground,
     TabBarBackground,
     TabInactiveBackground,
@@ -438,8 +434,6 @@ impl ThemeColors {
             ThemeColorField::IconPlaceholder => self.icon_placeholder,
             ThemeColorField::IconAccent => self.icon_accent,
             ThemeColorField::StatusBarBackground => self.status_bar_background,
-            ThemeColorField::TitleBarBackground => self.title_bar_background,
-            ThemeColorField::TitleBarInactiveBackground => self.title_bar_inactive_background,
             ThemeColorField::ToolbarBackground => self.toolbar_background,
             ThemeColorField::TabBarBackground => self.tab_bar_background,
             ThemeColorField::TabInactiveBackground => self.tab_inactive_background,

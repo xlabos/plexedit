@@ -1,7 +1,7 @@
 use gpui::{Hsla, Rgba};
 
-use crate::ColorScale;
 use crate::scale::{ColorScaleSet, ColorScales};
+use crate::ColorScale;
 use crate::{SystemColors, ThemeColors};
 
 pub(crate) fn neutral() -> ColorScaleSet {
@@ -72,8 +72,6 @@ impl ThemeColors {
             icon_accent: blue().light().step_11(),
             debugger_accent: red().light().step_10(),
             status_bar_background: neutral().light().step_2(),
-            title_bar_background: neutral().light().step_2(),
-            title_bar_inactive_background: neutral().light().step_3(),
             toolbar_background: neutral().light().step_1(),
             tab_bar_background: neutral().light().step_2(),
             tab_inactive_background: neutral().light().step_2(),
@@ -198,8 +196,6 @@ impl ThemeColors {
             icon_accent: blue().dark().step_11(),
             debugger_accent: red().light().step_10(),
             status_bar_background: neutral().dark().step_2(),
-            title_bar_background: neutral().dark().step_2(),
-            title_bar_inactive_background: neutral().dark().step_3(),
             toolbar_background: neutral().dark().step_1(),
             tab_bar_background: neutral().dark().step_2(),
             tab_inactive_background: neutral().dark().step_2(),

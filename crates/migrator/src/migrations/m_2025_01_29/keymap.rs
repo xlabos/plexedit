@@ -84,15 +84,6 @@ static TRANSFORM_ARRAY: LazyLock<HashMap<(&str, &str), &str>> = LazyLock::new(||
             ("workspace::SwapPaneInDirection", "Right"),
             "workspace::SwapPaneRight",
         ),
-        // menu
-        (
-            ("app_menu::NavigateApplicationMenuInDirection", "Left"),
-            "app_menu::ActivateMenuLeft",
-        ),
-        (
-            ("app_menu::NavigateApplicationMenuInDirection", "Right"),
-            "app_menu::ActivateMenuRight",
-        ),
         // vim push
         (("vim::PushOperator", "Change"), "vim::PushChange"),
         (("vim::PushOperator", "Delete"), "vim::PushDelete"),

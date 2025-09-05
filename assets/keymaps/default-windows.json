@@ -600,7 +600,6 @@
       "shift-new": "workspace::NewWindow",
       "ctrl-shift-n": "workspace::NewWindow",
       "ctrl-`": "terminal_panel::ToggleFocus",
-      "f10": ["app_menu::OpenApplicationMenu", "Zed"],
       "alt-1": ["workspace::ActivatePane", 0],
       "alt-2": ["workspace::ActivatePane", 1],
       "alt-3": ["workspace::ActivatePane", 2],
@@ -679,15 +678,6 @@
     "use_key_equivalents": true,
     "bindings": {
       "f5": "debugger::Continue"
-    }
-  },
-  {
-    "context": "ApplicationMenu",
-    "use_key_equivalents": true,
-    "bindings": {
-      "f10": "menu::Cancel",
-      "left": "app_menu::ActivateMenuLeft",
-      "right": "app_menu::ActivateMenuRight"
     }
   },
   // Bindings from Sublime Text

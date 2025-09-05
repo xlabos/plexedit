@@ -9,8 +9,8 @@ use std::{rc::Rc, sync::Arc};
 
 pub use collab_panel::CollabPanel;
 use gpui::{
-    App, Pixels, PlatformDisplay, Size, WindowBackgroundAppearance, WindowBounds,
-    WindowDecorations, WindowKind, WindowOptions, point,
+    point, App, Pixels, PlatformDisplay, Size, WindowBackgroundAppearance, WindowBounds,
+    WindowDecorations, WindowKind, WindowOptions,
 };
 use panel_settings::MessageEditorSettings;
 pub use panel_settings::{
@@ -32,7 +32,6 @@ pub fn init(app_state: &Arc<AppState>, cx: &mut App) {
     collab_panel::init(cx);
     notification_panel::init(cx);
     notifications::init(app_state, cx);
-    title_bar::init(cx);
 }
 
 fn notification_window_options(

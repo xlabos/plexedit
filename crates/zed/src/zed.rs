@@ -80,9 +80,7 @@ use workspace::{
     create_and_open_local_file, notifications::simple_message_notification::MessageNotification,
     open_new,
 };
-use workspace::{
-    CloseIntent, CloseWindow, NotificationFrame, RestoreBanner, with_active_or_new_workspace,
-};
+use workspace::{CloseIntent, CloseWindow, NotificationFrame, with_active_or_new_workspace};
 use workspace::{Pane, notifications::DetachAndPromptErr};
 use zed_actions::{
     OpenAccountSettings, OpenBrowser, OpenDocs, OpenServerSettings, OpenSettings, OpenZedUrl, Quit,
@@ -141,7 +139,6 @@ pub fn init(cx: &mut App) {
     cx.on_action(|_: &ShowAll, cx| cx.unhide_other_apps());
     cx.on_action(quit);
 
-    cx.on_action(|_: &RestoreBanner, cx| title_bar::restore_banner(cx));
     let flag = cx.wait_for_flag::<PanicFeatureFlag>();
     cx.spawn(async |cx| {
         if cx
@@ -4371,7 +4368,6 @@ mod tests {
                     | "git::UnstageAndNext"
                     | "terminal::SendText"
                     | "terminal::SendKeystroke"
-                    | "app_menu::OpenApplicationMenu"
                     | "picker::ConfirmInput"
                     | "editor::HandleInput"
                     | "editor::FoldAtLevel"
@@ -4861,7 +4857,6 @@ mod tests {
         cx.update(|cx| {
             settings::init(cx);
             workspace::init_settings(cx);
-            title_bar::init(cx);
             editor::init_settings(cx);
             debugger_ui::init(cx);
         });

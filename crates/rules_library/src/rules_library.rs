@@ -20,7 +20,6 @@ use std::sync::Arc;
 use std::sync::atomic::AtomicBool;
 use std::time::Duration;
 use theme::ThemeSettings;
-use title_bar::platform_title_bar::PlatformTitleBar;
 use ui::{
     Context, IconButtonShape, KeyBinding, ListItem, ListItemSpacing, ParentElement, Render,
     SharedString, Styled, Tooltip, Window, div, prelude::*,
@@ -120,11 +119,6 @@ pub fn open_rules_library(
         cx.update(|cx| {
             let app_id = ReleaseChannel::global(cx).app_id();
             let bounds = Bounds::centered(None, size(px(1024.0), px(768.0)), cx);
-            let window_decorations = match std::env::var("ZED_WINDOW_DECORATIONS") {
-                Ok(val) if val == "server" => gpui::WindowDecorations::Server,
-                Ok(val) if val == "client" => gpui::WindowDecorations::Client,
-                _ => gpui::WindowDecorations::Server,
-            };
             cx.open_window(
                 WindowOptions {
                     titlebar: Some(TitlebarOptions {
@@ -135,7 +129,7 @@ pub fn open_rules_library(
                     app_id: Some(app_id.to_owned()),
                     window_bounds: Some(WindowBounds::Windowed(bounds)),
                     window_background: cx.theme().window_background_appearance(),
-                    window_decorations: Some(window_decorations),
+                    window_decorations: Some(gpui::WindowDecorations::Server),
                     ..Default::default()
                 },
                 |window, cx| {
@@ -157,7 +151,6 @@ pub fn open_rules_library(
 }
 
 pub struct RulesLibrary {
-    title_bar: Option<Entity<PlatformTitleBar>>,
     store: Entity<PromptStore>,
     language_registry: Arc<LanguageRegistry>,
     rule_editors: HashMap<PromptId, RuleEditor>,
@@ -413,11 +406,6 @@ impl RulesLibrary {
             picker
         });
         Self {
-            title_bar: if !cfg!(target_os = "macos") {
-                Some(cx.new(|cx| PlatformTitleBar::new("rules-library-title-bar", cx)))
-            } else {
-                None
-            },
             store,
             language_registry,
             rule_editors: HashMap::default(),
@@ -1275,7 +1263,6 @@ impl Render for RulesLibrary {
                 .overflow_hidden()
                 .font(ui_font)
                 .text_color(theme.colors().text)
-                .children(self.title_bar.clone())
                 .child(
                     h_flex()
                         .flex_1()

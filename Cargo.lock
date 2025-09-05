@@ -3417,7 +3417,6 @@ dependencies = [
  "theme",
  "time",
  "time_format",
- "title_bar",
  "tree-sitter-md",
  "ui",
  "util",
@@ -13973,7 +13972,6 @@ dependencies = [
  "serde",
  "settings",
  "theme",
- "title_bar",
  "ui",
  "util",
  "workspace",
@@ -15651,7 +15649,6 @@ dependencies = [
  "story",
  "strum 0.27.1",
  "theme",
- "title_bar",
  "ui",
  "workspace",
  "workspace-hack",
@@ -16746,42 +16743,6 @@ name = "tinyvec_macros"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
-
-[[package]]
-name = "title_bar"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "auto_update",
- "call",
- "chrono",
- "client",
- "cloud_llm_client",
- "collections",
- "db",
- "gpui",
- "http_client",
- "keymap_editor",
- "notifications",
- "pretty_assertions",
- "project",
- "remote",
- "rpc",
- "schemars",
- "serde",
- "settings",
- "smallvec",
- "story",
- "telemetry",
- "theme",
- "tree-sitter-md",
- "ui",
- "util",
- "windows 0.61.1",
- "workspace",
- "workspace-hack",
- "zed_actions",
-]
 
 [[package]]
 name = "tokio"
@@ -20547,7 +20508,6 @@ dependencies = [
  "theme_extension",
  "theme_selector",
  "time",
- "title_bar",
  "toolchain_selector",
  "tree-sitter-md",
  "tree-sitter-rust",
